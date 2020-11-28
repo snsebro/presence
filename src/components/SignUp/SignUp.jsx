@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import FormInput from '../FormInput/FormInput'
 import CustomButton from '../CustomButton/CustomButton'
+import './SignUp.scss'
 
 import { auth, createUserProfileDocument } from "../../firebase/firebase"
 
@@ -53,7 +54,7 @@ export default function SignUp() {
   return (
     <div className="sign-up">
       <h2>Sign Up</h2>
-      <p>Already Have An Account? <a href="">Login</a></p>
+      <p>Already Have An Account? <a href="/login">Login</a></p>
       <form className="sign-up-form" onSubmit={handleSubmit}>
         <FormInput
           type="text"

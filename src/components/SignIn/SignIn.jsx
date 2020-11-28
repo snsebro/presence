@@ -30,7 +30,7 @@ export default function SignIn() {
   return (
     <div className="sign-in">
       <h2>Login</h2>
-      <p>New To Presence?<a href="">Sign Up For Free</a></p>
+      <p>New To Presence?<a href="/signup">Sign Up For Free</a></p>
 
       <form>
         <FormInput
@@ -48,8 +48,8 @@ export default function SignIn() {
           required
         />
         <div className="buttons">
-          <CustomButton type="submit" value="Submit Form">Sign In</CustomButton>
-          <CustomButton type="button" onClick={signInWithGoogle} isGoogleSignIn>{' '}Sign In With Google{''}</CustomButton>
+          <CustomButton type="submit" onClick={handleSubmit} value="Submit Form">Sign In</CustomButton>
+          <CustomButton type="button" onClick={signInWithGoogle} isLinkedSignIn>{' '}Sign In With Google{''}</CustomButton>
         </div>
       </form>
     </div>
