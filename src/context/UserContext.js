@@ -11,6 +11,13 @@ const UserContextProvider = (props) => {
 
   useEffect(() => {
     auth.onAuthStateChanged((user => {
+      // if (!userRef.where("uid", "==", user.uid)) {
+      //   auth.createUserWithEmailAndPassword(
+      //     user.email,
+      //     user.password
+      //   )
+      // }
+
       if (user) {
         const userFirestoreRef = firestore.collection(`users/${user.uid}/Journal Entries`)
         console.log(userFirestoreRef)
@@ -21,7 +28,8 @@ const UserContextProvider = (props) => {
             let tempEntries = []
             querySnapshot.forEach((doc) => {
               tempEntries.push({
-                ...doc.data()
+                ...doc.data(),
+                id: doc.id
               })
             })
             setCurrentUserFirestore(tempEntries)

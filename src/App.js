@@ -6,6 +6,11 @@ import SignUpPage from './pages/SignUpPage/SignUpPage';
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { useContext } from 'react';
 import DashBoard from './pages/DashBoard/DashBoard';
+import NewEntry from './components/NewEntry/NewEntry';
+import AllEntries from './components/AllEntries/AllEntries'
+import EntryDetail from './components/EntryDetail/EntryDetail';
+import EntryEdit from './components/EntryEdit/EntryEdit';
+import Homepage from './pages/Homepage/Homepage';
 
 function App() {
   let { currentUser } = useContext(UserContext)
@@ -15,18 +20,38 @@ function App() {
       <Header/>
       <Switch>
         <Route
+          exact
+          path="/"
+          component={Homepage} />
+        <Route
           path="/login"
           render={() =>
-            currentUser ? <Redirect to="/" /> : <LoginPage/>} />
+            currentUser ? <Redirect to="/dashboard" /> : <LoginPage/>} />
         <Route
           path="/signup"
           render={() =>
-            currentUser ? <Redirect to="/" /> : <SignUpPage/>} />
+            currentUser ? <Redirect to="/dashboard" /> : <SignUpPage/>} />
         <Route
           path="/dashboard"
-          render={() =>
-            currentUser ? <DashBoard /> :<Redirect to="/login" />} />
-        
+          render={(props) =>
+            currentUser ? <DashBoard {...props} /> :<Redirect to="/login" />} />
+        <Route
+          path="/new-entry"
+          render={(props) =>
+            currentUser ? <NewEntry {...props}/> :<Redirect to="/login" />} />
+        <Route
+          path="/all-entries"
+          render={(props) =>
+            currentUser ? <AllEntries {...props}/> :<Redirect to="/login" />} />
+        <Route
+          exact
+          path="/entry/:id"
+          render={(props) =>
+            currentUser ? <EntryDetail {...props}/> :<Redirect to="/login" />} />
+        <Route
+          path="/entry/:id/edit"
+          render={(props) =>
+            currentUser ? <EntryEdit {...props}/> :<Redirect to="/login" />} />
       </Switch>
     </div>
   );

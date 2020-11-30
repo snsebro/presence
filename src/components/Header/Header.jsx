@@ -3,6 +3,7 @@ import { auth } from '../../firebase/firebase'
 import { Link, NavLink } from 'react-router-dom'
 import { ReactComponent as PresenceLogo } from '../../assets/presence-icon.svg'
 import { UserContext } from '../../context/UserContext'
+import './Header.scss'
 
 export default function Header() {
 
@@ -11,7 +12,7 @@ export default function Header() {
   return (
     <header>
       <Link className="logo-container" to="/">
-        <h2><PresenceLogo />Presence</h2>
+        <h2><PresenceLogo className="logo" />Presence</h2>
       </Link>
       <div className="nav-links-div">
         <NavLink to="/dashboard" className="nav-link">

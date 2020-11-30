@@ -1,0 +1,92 @@
+.new-entry {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 110px;
+
+  .new-entry-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+
+    .daily-prompt {
+      background-color: #FAF3EC;
+      border-radius: 10px;
+      padding: 0px 40px;
+
+      p {
+        margin-bottom: 30px;
+      }
+
+      .title {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: space-between;
+
+        a {
+          text-decoration: none;
+          color: #464646;
+        }
+      }
+    }
+
+    .past-prompts {
+      background-color: #FAF3EC;
+      border-radius: 10px;
+      padding: 0px 40px;
+
+    }
+
+  }
+  
+  .new-entry-form {
+
+    background-color: #FAF3EC;
+    border-radius: 10px;
+    padding: 0px 30px 30px 30px;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+
+    input {
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 10px;
+      height: 40px;
+      padding-left: 20px;
+      font-family: 'Libre Baskerville', serif;
+
+    }
+
+    textarea {
+      margin-bottom: 20px;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+      resize: none;
+      outline: none;
+      padding: 20px;
+      font-family: 'Libre Baskerville', serif;
+    }
+
+    button {
+      width: 40%;
+      margin: 0 auto;
+      background-color: #0A425C;
+      border: none;
+      border-radius: 20px;
+      color: white;
+      height: 30px;
+      font-family: 'Libre Baskerville', serif;
+      outline: none;
+  
+      &:hover {
+        background-color: #011A26;
+        cursor: pointer;
+    }
+    }
+
+  }
+
+}

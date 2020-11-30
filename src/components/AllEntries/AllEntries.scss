@@ -1,0 +1,45 @@
+.all-entries {
+  background-color: #FAF3EC;
+  border-radius: 10px;
+  padding: 20px 40px;
+  width: 90%;
+  margin: 0 auto;
+  height: 80vh;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  input {
+    width: 22%;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #011A26;
+    border: none;
+    outline: none;
+    color:white;
+    margin: 20px 0px 40px 0px;
+    padding: 0px 20px;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    &::placeholder {
+      color: white;
+      text-align: center;
+    }
+  }
+
+  .entry-date {
+    color: #464646;
+    font-size: 12px;
+    margin: 6px 0px;
+  }
+  
+  .entry-preview {
+    margin: 6px 0px 25px 0px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}

@@ -1,0 +1,39 @@
+.homepage {
+  .first-tile {
+    height: calc(100vh - 92px);
+    background-color: #023A53;
+    color: white;
+    h1 {
+      margin-left: 33px;
+      width: 15%;
+      letter-spacing: 2px;
+      line-height: 45px;
+    }
+
+  }
+
+  .second-tile {
+    height: 100vh;
+    background-color: #FAF3EC;
+    padding-top: 40px;
+
+    h1 {
+      margin: 0px 0px 0px 33px;
+      width: 50%;
+      letter-spacing: 2px;
+      line-height: 45px;
+      color: #656565;
+    }
+  }
+  .third-tile {
+    height: 100vh;
+    padding-top: 40px;
+    h1 {
+      margin: 0px 0px 0px 33px;
+      width: 50%;
+      letter-spacing: 2px;
+      line-height: 45px;
+    }
+
+  }
+}

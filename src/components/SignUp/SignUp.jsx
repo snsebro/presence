@@ -5,6 +5,7 @@ import CustomButton from '../CustomButton/CustomButton'
 import './SignUp.scss'
 
 import { auth, createUserProfileDocument } from "../../firebase/firebase"
+import { ReactComponent as CheckIcon } from "../../assets/check-icon.svg"
 
 export default function SignUp() {
   const [displayName, setDisplayName] = useState("")
@@ -52,36 +53,65 @@ export default function SignUp() {
   }
 
   return (
-    <div className="sign-up">
-      <h2>Sign Up</h2>
-      <p>Already Have An Account? <a href="/login">Login</a></p>
-      <form className="sign-up-form" onSubmit={handleSubmit}>
-        <FormInput
-          type="text"
-          name="email"
-          value={email}
-          handleChange={handleEmailChange}
-          label="email"
-          required
-        />
-        <FormInput
-          type="text"
-          name="password"
-          value={password}
-          handleChange={handlePasswordChange}
-          label="password"
-          required
-        />
-        <FormInput
-          type="text"
-          name="confirmPassword"
-          value={confirmPassword}
-          handleChange={handleConfirmPasswordChange}
-          label="Confirm Password"
-          required
-        />
-        <CustomButton type="submit">Create An Account</CustomButton>
-      </form>
+    <div className="sign-up-grid">
+      <div className="sign-up-left">
+        <h2 className="message">
+          Take a moment to reflect and clear your mind with Presence.
+      </h2>
+        <div className="benefits">
+          <div className="benefit">
+          <CheckIcon className="check-icon"/><p>
+              Daily prompts to promote self reflection and mindfulness
+        </p>
+        </div>
+          <div className="benefit">
+          <CheckIcon className="check-icon"/><p>
+              Daily prompts to promote self reflection and mindfulness
+        </p>
+        </div>
+          <div className="benefit">
+          <CheckIcon className="check-icon"/><p>
+              Daily prompts to promote self reflection and mindfulness
+        </p>
+        </div>
+          
+        </div>
+      </div>
+      <div className="sign-up">
+        <h2>Sign Up</h2>
+        <p>Already Have An Account? <a href="/login">Login</a></p>
+        <form className="sign-up-form" onSubmit={handleSubmit}>
+          <FormInput
+            type="text"
+            placeholder="Email Adress"
+            name="email"
+            value={email}
+            handleChange={handleEmailChange}
+            label="email"
+            required
+          />
+          <FormInput
+            type="text"
+            placeholder="Password"
+            name="password"
+            value={password}
+            handleChange={handlePasswordChange}
+            label="password"
+            required
+          />
+          <FormInput
+            type="text"
+            placeholder="Confirm Password"
+            name="confirmPassword"
+            value={confirmPassword}
+            handleChange={handleConfirmPasswordChange}
+            label="Confirm Password"
+            required
+          />
+          <CustomButton type="submit">Create An Account</CustomButton>
+        </form>
+      </div>
+
     </div>
   )
 }

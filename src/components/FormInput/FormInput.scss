@@ -1,0 +1,20 @@
+.group{
+  width: 100%;
+  text-align: center;
+
+  .form-input {
+    width: 80%;
+    height: 30px;
+    padding: 5px 10px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+
+    &::placeholder{
+      color: black;
+      font-family: 'Libre Baskerville', serif;
+    }
+  }
+
+}

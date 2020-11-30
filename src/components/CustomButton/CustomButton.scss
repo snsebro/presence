@@ -1,0 +1,16 @@
+.custom-button {
+  background-color: #0A425C;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  height: 30px;
+  margin: 10px 0px;
+  font-family: 'Libre Baskerville', serif;
+  outline: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #011A26;
+    outline: none
+  }
+}

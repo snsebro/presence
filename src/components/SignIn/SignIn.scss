@@ -1,0 +1,47 @@
+.sign-in {
+  background-color: #FAF3EC;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  margin-top: 50px;
+  box-shadow: 0px 1px 8px rgba(163, 163, 163, 0.404);
+
+  p{
+    color: #5F5F5F;
+  }
+
+  a {
+    text-decoration: none;
+    color: #0A425C;
+  }
+
+  .login-form {
+    width: 100%;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .custom-button{
+      width: 70%;
+      padding: 10px 30px;
+      height: 40px;
+      border-radius: 20px;
+
+      &:hover {
+        background-color: #011A26;
+      }
+    }
+  }
+}
+
+//Move to form Input styles
+label {
+  display: none;
+}

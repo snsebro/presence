@@ -1,0 +1,58 @@
+.entry-edit {
+  background-color: #FAF3EC;
+  border-radius: 10px;
+  padding: 20px 40px;
+  width: 90%;
+  margin: 0 auto;
+  height: 80vh;
+  overflow-y: scroll;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .entry-date {
+    color: #464646;
+    font-size: 12px;
+    margin: 12px 0px;
+    padding-left: 20px;
+  }
+
+  .entry-form{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+
+    .edit-text {
+      border: none;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      outline: none;
+      font-family: 'Libre Baskerville', serif;
+      height: 90%;
+      resize: none;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    button {
+      width: 20%;
+      margin: 0 auto;
+      background-color: #0A425C;
+      border: none;
+      border-radius: 20px;
+      color: white;
+      height: 30px;
+      font-family: 'Libre Baskerville', serif;
+      outline: none;
+  
+      &:hover {
+        background-color: #011A26;
+        cursor: pointer;
+    }
+    }
+  }
+}

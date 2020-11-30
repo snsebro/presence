@@ -1,0 +1,41 @@
+header {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  margin: 0 auto;
+  
+  a {
+    text-decoration: none;
+    color: white
+  }
+
+
+  .logo {
+      width: 22px;
+      height: 15px;
+      margin: 0px 5px;
+    }
+
+  h2 {
+      font-size: 18px;
+    }
+    
+  .nav-links-div {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+
+    .nav-link {
+      padding: 0px 10px;
+      color: white;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+}
