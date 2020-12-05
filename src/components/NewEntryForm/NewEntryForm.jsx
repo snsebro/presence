@@ -1,6 +1,8 @@
 import React, { useState, useContext } from 'react'
 import { auth, firestore } from '../../firebase/firebase'
 import { UserContext } from '../../context/UserContext'
+import { months } from "../../helpers"
+import './NewEntryForm.scss'
 
 export default function NewEntryForm() {
   const [entry, setEntry] = useState("")
@@ -13,12 +15,19 @@ export default function NewEntryForm() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     const userRef = await firestore.collection(`users/${currentUser.uid}/Journal Entries`)
+
+    const d = new Date()
     const currentDate = Date.now()
+    const currentMonth = d.getMonth()
+    const dayOfMonth = d.getDate()
+    const currentYear = d.getFullYear()
     const createdAt = new Date(currentDate)
+
     userRef.add({
       Title: title,
       Body: entry,
       Created: createdAt,
+      Date: `${months[currentMonth][0]} ${dayOfMonth}, ${currentYear}`
     })
       .then((docRef) => {
         console.log("Document written with ID: ", docRef.id)
@@ -44,13 +53,13 @@ export default function NewEntryForm() {
         type="text"
         placeholder="Entry Title"
         value={title}
-        onChange={handleTitleChange}/>
+        onChange={handleTitleChange} />
       <textarea
         onChange={handleChange}
         placeholder="Entry Text"
       />
 
-      
+
       <button type="submit" >Save Entry</button>
     </form>
   )

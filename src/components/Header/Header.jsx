@@ -11,9 +11,11 @@ export default function Header() {
 
   return (
     <header>
-      <Link className="logo-container" to="/">
-        <h2><PresenceLogo className="logo" />Presence</h2>
-      </Link>
+      <div>
+        <Link className="logo-container" to="/">
+          <h2><PresenceLogo className="logo" />Presence</h2>
+        </Link>
+      </div>
       <div className="nav-links-div">
         <NavLink to="/dashboard" className="nav-link">
           Dashboard

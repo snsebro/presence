@@ -13,14 +13,23 @@ header {
 
 
   .logo {
-      width: 22px;
-      height: 15px;
-      margin: 0px 5px;
+      width: 32px;
+      height: 25px;
+      margin-right: 20px;
     }
 
   h2 {
-      font-size: 18px;
+      font-size: 26px;
+      display: flex;
+      align-items: center;
+      letter-spacing: 1.5px;
     }
+
+    // .logo-container {
+    //   display: flex;
+    //   align-items: center;
+    //   align-content: center;
+    // }
     
   .nav-links-div {
     display: flex;

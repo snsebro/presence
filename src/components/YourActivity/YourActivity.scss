@@ -1,0 +1,53 @@
+.your-activity {
+  margin-top: 70px;
+  box-shadow: 0px 1px 8px rgba(163, 163, 163, 0.404);
+  background-color: #FAF3EC;
+      border-radius: 10px;
+      padding: 0px 40px 20px 40px;
+      display: flex;
+
+      .activity-calendar {
+        width: 278px;
+        height: 150px;
+      }
+
+      .activity-stats {
+        margin: auto auto;
+      }
+    
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  
+   span {
+    font-size: 15px;
+   } 
+  
+   .month {
+     margin-top: auto;
+     color: #023A53;
+   }
+  }
+  
+  .calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+  
+    .calendar-day {
+      height: 40px;
+      width: 40px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #023A53;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+}
