@@ -23,3 +23,11 @@ export const months = {
   10: ["November", 30],
   11: ["December", 31]
 }
+
+export const entrySnippet = (entry, snippetLength) => {
+  if (entry.length < snippetLength) {
+    return entry
+  }
+
+  return entry.split("").slice(0, snippetLength).join("").trim().concat("...")
+}

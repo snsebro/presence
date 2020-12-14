@@ -11,6 +11,7 @@ import AllEntries from './components/AllEntries/AllEntries'
 import EntryDetail from './components/EntryDetail/EntryDetail';
 import EntryEdit from './components/EntryEdit/EntryEdit';
 import Homepage from './pages/Homepage/Homepage';
+import Resources from './pages/Resources/Resources';
 
 function App() {
   let { currentUser } = useContext(UserContext)
@@ -35,6 +36,9 @@ function App() {
           path="/dashboard"
           render={(props) =>
             currentUser ? <DashBoard {...props} /> :<Redirect to="/login" />} />
+        <Route
+          path="/resources"
+          component={Resources} />
         <Route
           path="/new-entry"
           render={(props) =>

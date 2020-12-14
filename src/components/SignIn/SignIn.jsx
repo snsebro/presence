@@ -39,6 +39,7 @@ export default function SignIn() {
 
       <form className="login-form">
         <FormInput
+          type="email"
           name="email"
           value={email}
           handleChange={handleEmailChange}

@@ -53,6 +53,13 @@
     align-items: center;
     padding: 40px 60px;
     box-shadow: 0px 1px 8px rgba(163, 163, 163, 0.404);
+    a {
+      text-decoration: none;
+      color: #0A425C;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   .sign-up-form {

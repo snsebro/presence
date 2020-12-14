@@ -82,7 +82,7 @@ export default function SignUp() {
         <p>Already Have An Account? <a href="/login">Login</a></p>
         <form className="sign-up-form" onSubmit={handleSubmit}>
           <FormInput
-            type="text"
+            type="email"
             placeholder="Email Adress"
             name="email"
             value={email}
@@ -91,7 +91,7 @@ export default function SignUp() {
             required
           />
           <FormInput
-            type="text"
+            type="password"
             placeholder="Password"
             name="password"
             value={password}
@@ -100,7 +100,7 @@ export default function SignUp() {
             required
           />
           <FormInput
-            type="text"
+            type="password"
             placeholder="Confirm Password"
             name="confirmPassword"
             value={confirmPassword}
