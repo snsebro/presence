@@ -1,5 +1,6 @@
 import React from 'react'
 import './Homepage.scss'
+import { Link } from 'react-router-dom'
 
 export default function Homepage() {
   return (
@@ -8,7 +9,7 @@ export default function Homepage() {
         <h1>
           Take A Moment To Reflect
         </h1>
-        <button><a href="/login">Get Started</a></button>
+        <button><Link to="/login">Get Started</Link></button>
       </div>
     </div>
   )
