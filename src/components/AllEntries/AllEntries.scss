@@ -6,6 +6,11 @@
   margin: 0 auto;
   height: 80vh;
   overflow-y: scroll;
+
+  @media (max-width:1000px) {
+    width: 80%;
+  }
+
   &::-webkit-scrollbar {
     display: none;
   }
@@ -22,6 +27,11 @@
     padding: 0px 20px;
     font-family: 'Libre Baskerville', serif;
     text-align: center;
+    
+    @media (max-width: 1000px) {
+      width: 40%;
+    }
+
     &::placeholder {
       color: white;
       text-align: center;

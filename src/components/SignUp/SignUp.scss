@@ -4,10 +4,22 @@
   margin-top: 70px;
   width: 100%;
 
+  @media(max-width: 1000px) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
   .sign-up-left {
     display: flex;
     flex-direction: column;
     width: 50%;
+
+    @media(max-width: 1000px) {
+      width: 70%;
+      text-align: center;
+    }
+
+    
   }
   
   .message {
@@ -16,12 +28,31 @@
     color: white;
     font-size: 30px;
     line-height: 45px;
+
+    @media (max-width: 1000px) {
+      color: black;
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    @media(max-width: 500px) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
   
   .benefits {
-    font-size: 20px;
+    font-size: 25px;
     margin: 40px 0px;
     width: 70%;
+
+    @media(max-width: 1000px) {
+      width: 100%;
+    }
+
+    @media(max-width: 500px) {
+      font-size: 15px;
+    }
 
     .benefit {
       display: flex;
@@ -34,6 +65,10 @@
 
     p {
         margin-left: 20px;
+
+        @media(max-width: 500px) {
+          margin-left: 10px;;
+        }
       }
     }
     
@@ -53,6 +88,11 @@
     align-items: center;
     padding: 40px 60px;
     box-shadow: 0px 1px 8px rgba(163, 163, 163, 0.404);
+
+    @media (max-width:1000px) {
+      width: 90%;
+      padding: 40px 0px;
+    }
     a {
       text-decoration: none;
       color: #0A425C;

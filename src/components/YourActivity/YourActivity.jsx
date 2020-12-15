@@ -70,12 +70,12 @@ export default function YourActivity() {
           </div>
         </div>
       </div>
-      <div className="activity-stats">
+      {/* <div className="activity-stats">
         <p>Longest Streak</p>
         <p>Last Entry</p>
         <p>First Entry</p>
         <p>Last Entry</p>
-      </div>
+      </div> */}
     </div>
   )
 }

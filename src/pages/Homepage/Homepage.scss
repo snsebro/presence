@@ -1,13 +1,46 @@
 .homepage {
+  background-color: #023A53;
   .first-tile {
-    height: calc(100vh - 92px);
-    background-color: #023A53;
+    height: calc(100vh - 115px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     color: white;
+    text-align: center;
+
     h1 {
-      margin-left: 33px;
-      width: 15%;
+      // margin: auto auto;
+      width: 90%;
       letter-spacing: 2px;
       line-height: 45px;
+    }
+
+    button {
+      font-family: 'Libre Baskerville', serif;
+      width: 20%;
+      height: 40px;
+      border-radius: 20px;
+      background-color: white;
+      border: none;
+      outline: none;
+      text-align: center;
+      margin-top: 50px;
+
+      a {
+        text-decoration: none;
+       color: black;
+      }
+
+      @media(max-width: 900px) {
+        width: 40%;
+      }
+
+      &:hover{
+        cursor: pointer;
+        background-color: lightgray;
+        color: black;
+      }
     }
 
   }

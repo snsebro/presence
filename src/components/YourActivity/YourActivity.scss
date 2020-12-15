@@ -5,15 +5,27 @@
       border-radius: 10px;
       padding: 0px 40px 20px 40px;
       display: flex;
+  
+  @media (max-width: 1000px) {
+    margin-top: 30px;
+    flex-direction: column;
+  }
 
-      .activity-calendar {
-        width: 278px;
-        height: 150px;
-      }
+    
 
-      .activity-stats {
-        margin: auto auto;
-      }
+  .activity-calendar {
+    width: 278px;
+    height: 150px;
+  }
+
+  .activity-stats {
+    margin: auto auto;
+    
+    @media(max-width: 1000px) {
+      text-align: left;
+      margin: 0;
+    }
+  }
     
 
   .title {
@@ -23,12 +35,15 @@
   
    span {
     font-size: 15px;
-   } 
+  } 
   
-   .month {
-     margin-top: auto;
-     color: #023A53;
-   }
+  .month {
+    margin-top: auto;
+    color: #023A53;
+    @media (max-width: 1000px) {
+      font-size: 12px;
+    }
+  }
   }
   
   .calendar {
@@ -45,6 +60,10 @@
       justify-content: center;
       align-items: center;
       border: 1px solid #023A53;
+      @media (max-width: 1000px) {
+        height: 32px;
+        width: 32px;
+      }
       &:hover{
         cursor: pointer;
       }

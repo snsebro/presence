@@ -6,6 +6,10 @@
   margin: 0 auto;
   height: 80vh;
   overflow-y: scroll;
+
+  @media (max-width:1000px) {
+    width: 80%;
+  }
   
   &::-webkit-scrollbar {
     display: none;

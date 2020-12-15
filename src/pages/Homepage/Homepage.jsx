@@ -8,19 +8,7 @@ export default function Homepage() {
         <h1>
           Take A Moment To Reflect
         </h1>
-      </div>
-      <div className="second-tile">
-        <h1>
-          The Benefits of Journaling and Taking Time to Reflect
-          </h1>
-      </div>
-      <div className="third-tile">
-        <h1>
-
-        The Research Behind Journaling and Mindfulness Practices
-
-        </h1>
-        <button>Get Started</button>
+        <button><a href="/login">Get Started</a></button>
       </div>
     </div>
   )

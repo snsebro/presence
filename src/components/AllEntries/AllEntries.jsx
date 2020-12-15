@@ -1,8 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { UserContext } from '../../context/UserContext'
-import { formatDate } from '../../helpers'
-import {ReactComponent as SearchIcon} from '../../assets/search-icon.svg'
+import { formatDate, entrySnippet } from '../../helpers'
 import './AllEntries.scss'
 
 export default function AllEntries() {
@@ -47,7 +46,7 @@ export default function AllEntries() {
             </p>
           <Link to={`entry/${entry.id}`}>
           <p className="entry-preview">
-            {entry.Body}
+            {entry && entrySnippet(entry.Body, 100)}
           </p>
           </Link>
         </div>

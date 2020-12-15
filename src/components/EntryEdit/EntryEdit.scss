@@ -1,11 +1,14 @@
 .entry-edit {
   background-color: #FAF3EC;
   border-radius: 10px;
-  padding: 20px 40px;
   width: 90%;
   margin: 0 auto;
-  height: 80vh;
-  overflow-y: scroll;
+  height: 85vh;
+
+ h2 {
+   padding: 40px 0px 0px 50px;
+   margin: 0px;
+ }
   
   &::-webkit-scrollbar {
     display: none;
@@ -22,6 +25,7 @@
     display: flex;
     flex-direction: column;
     height: 90%;
+    padding: 20px 40px;
 
     .edit-text {
       border: none;
@@ -38,16 +42,16 @@
     }
 
     button {
-      width: 20%;
-      margin: 0 auto;
+      width: 40%;
+      margin: 5px auto 40px auto;
       background-color: #0A425C;
       border: none;
       border-radius: 20px;
       color: white;
-      height: 30px;
+      height: 40px;
       font-family: 'Libre Baskerville', serif;
       outline: none;
-  
+
       &:hover {
         background-color: #011A26;
         cursor: pointer;

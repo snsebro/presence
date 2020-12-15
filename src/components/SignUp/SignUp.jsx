@@ -66,12 +66,12 @@ export default function SignUp() {
         </div>
           <div className="benefit">
           <CheckIcon className="check-icon"/><p>
-              Daily prompts to promote self reflection and mindfulness
+              Resoucres about the practice of journaling and its benefits
         </p>
         </div>
           <div className="benefit">
           <CheckIcon className="check-icon"/><p>
-              Daily prompts to promote self reflection and mindfulness
+              A space to take a moment to reflect
         </p>
         </div>
           

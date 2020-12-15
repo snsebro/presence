@@ -1,0 +1,59 @@
+.resources {
+  text-align: center;
+  line-height: 30px;
+  width: 100%;
+  
+  ul {
+    list-style: none;
+    margin: 0 auto;
+  }
+  
+  li {
+    list-style: none;
+    margin: 5px auto;
+  }
+  
+  p {
+    margin: 0;
+    padding: 0px 20px;
+  }
+  
+  .presence-blurb {
+    margin-top: 50px;
+    padding: 30px 0px;
+    background-color:  #023A53;
+    color: white;
+
+  }
+  
+  .what-is-journaling {
+    padding: 30px 0px;
+    background-color: #FAF3EC;
+  }
+  
+  .what-to-write {
+    padding: 30px 0px;
+    
+  }
+  
+  .journaling-types {
+    padding: 30px 0px;
+    background-color:  #023A53;
+    color: white;
+    
+    a {
+      color: white; 
+    }
+    
+  }
+  
+  .learn-more {
+    padding: 30px 0px;
+    padding-top: 30px;
+    background-color: #FAF3EC;
+    
+    a {
+      color: #023A53; 
+    }
+  }
+}
