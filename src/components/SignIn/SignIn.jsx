@@ -4,6 +4,7 @@ import CustomButton from '../CustomButton/CustomButton'
 import { useState } from 'react'
 import { signInWithGoogle, auth } from '../../firebase/firebase'
 import './SignIn.scss'
+import { Link } from 'react-router-dom'
 
 
 export default function SignIn() {
@@ -35,7 +36,7 @@ export default function SignIn() {
   return (
     <div className="sign-in">
       <h2>Login</h2>
-      <p>New To Presence? <a href="/signup">Sign Up For Free</a></p>
+      <p>New To Presence? <Link to="/signup">Sign Up For Free</Link></p>
 
       <form className="login-form">
         <FormInput

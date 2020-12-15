@@ -1,5 +1,5 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import FormInput from '../FormInput/FormInput'
 import CustomButton from '../CustomButton/CustomButton'
 import './SignUp.scss'
@@ -60,26 +60,26 @@ export default function SignUp() {
       </h2>
         <div className="benefits">
           <div className="benefit">
-          <CheckIcon className="check-icon"/><p>
+            <CheckIcon className="check-icon" /><p>
               Daily prompts to promote self reflection and mindfulness
         </p>
-        </div>
+          </div>
           <div className="benefit">
-          <CheckIcon className="check-icon"/><p>
+            <CheckIcon className="check-icon" /><p>
               Resoucres about the practice of journaling and its benefits
         </p>
-        </div>
+          </div>
           <div className="benefit">
-          <CheckIcon className="check-icon"/><p>
+            <CheckIcon className="check-icon" /><p>
               A space to take a moment to reflect
         </p>
-        </div>
-          
+          </div>
+
         </div>
       </div>
       <div className="sign-up">
         <h2>Sign Up</h2>
-        <p>Already Have An Account? <a href="/login">Login</a></p>
+        <p>Already Have An Account? <Link to="/login">Login</Link></p>
         <form className="sign-up-form" onSubmit={handleSubmit}>
           <FormInput
             type="email"
