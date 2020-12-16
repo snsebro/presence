@@ -71,7 +71,7 @@ export default function SignUp() {
           </div>
           <div className="benefit">
             <CheckIcon className="check-icon" /><p>
-              A space to take a moment to reflect
+              A space to self reflect and practice mindfulness
         </p>
           </div>
 

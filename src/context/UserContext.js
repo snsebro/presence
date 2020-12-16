@@ -7,16 +7,8 @@ const UserContextProvider = (props) => {
   const [currentUser, setCurrentUser] = useState(null)
   const [currentUserFirestore, setCurrentUserFirestore] = useState(null)
 
-  const userRef = firestore.collection('users')
-
   useEffect(() => {
     auth.onAuthStateChanged((user => {
-      // if (!userRef.where("uid", "==", user.uid)) {
-      //   auth.createUserWithEmailAndPassword(
-      //     user.email,
-      //     user.password
-      //   )
-      // }
 
       if (user) {
         const userFirestoreRef = firestore.collection(`users/${user.uid}/Journal Entries`)
