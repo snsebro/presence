@@ -1,17 +1,7 @@
 import firebase from 'firebase/app'
 import 'firebase/firestore'
 import 'firebase/auth'
-
-const firebaseConfig = {
-  apiKey: "AIzaSyD0rra6n-qMtUC56ZLxGjTJZ4IQqxMhCs8",
-  authDomain: "presence-2020.firebaseapp.com",
-  databaseURL: "https://presence-2020.firebaseio.com",
-  projectId: "presence-2020",
-  storageBucket: "presence-2020.appspot.com",
-  messagingSenderId: "188956946761",
-  appId: "1:188956946761:web:0fe2b95e17a19fe0bd2a98",
-  measurementId: "G-63TNDFQ67X"
-};
+import { firebaseConfig } from '../config'
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return
