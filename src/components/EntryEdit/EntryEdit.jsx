@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 import { UserContext } from '../../context/UserContext';
 import { firestore } from "../../firebase/firebase"
 import { formatDate } from "../../helpers"
@@ -12,8 +12,9 @@ export default function EntryEdit() {
   const { id } = useParams()
   let currentEntry = currentUserFirestore.find((entry) => entry.id == id);
 
+  let history = useHistory()
+
   const entryRef = firestore.collection(`users/${currentUser.uid}/Journal Entries`).doc(id)
-  // const query = entryRef.where("id", "==", id)
 
   useEffect(() => {
     setEntry(currentEntry.Body)
@@ -33,6 +34,7 @@ export default function EntryEdit() {
       .then(() => {
         console.log("Document successfully updated!")
       })
+      .then(history.push(`/entry/${currentEntry.id}`))
       .catch((error) => {
         console.error("Error updating document: ", error)
       })
