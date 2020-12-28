@@ -6,6 +6,7 @@
   ul {
     list-style: none;
     margin: 0 auto;
+    padding: 0px;
   }
   
   li {
@@ -14,37 +15,138 @@
   }
   
   p {
-    margin: 0;
+    margin: 0 auto;
     padding: 0px 20px;
+    @media(max-width: 1200px) {
+      padding: 0px;
+    }
   }
   
   .presence-blurb {
-    margin-top: 50px;
     padding: 30px 0px;
     background-color:  #023A53;
     color: white;
+    text-align: center;
+    
+    p {
+      width: 70%;
+      margin-bottom: 20px;
+    }
+
+    .presence-blurb-svg {
+      @media(max-width: 1050px) {
+        width: 90%;
+        height: auto;
+      }
+    }
 
   }
   
   .what-is-journaling {
-    padding: 30px 0px;
     background-color: #FAF3EC;
+    display: flex;
+
+    .what-is-journaling-right {
+      padding: 0px 30px;
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      justify-content: center;
+      align-items: center;
+
+      @media(max-width: 1000px) {
+        width: 100%;
+        p {
+          padding: 0px;
+        }
+      }
+    }
+
+    @media(max-width: 1200px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 30px;
+    }
+
+    .what-is-journaling-svg {
+        @media(max-width: 1050px) {
+        width: 90%;
+        height: auto;
+      }
+    }
   }
   
   .what-to-write {
-    padding: 30px 0px;
+    display: flex;
+
+    .what-to-write-left {
+      padding: 0px 30px;
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      justify-content: center;
+      align-items: center;
+
+      @media(max-width: 1200px) {
+        width: 100%;
+        padding-bottom: 30px;
+      }
+    }
+
+    @media(max-width: 1200px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 30px;
+    }
+
+    .what-to-write-svg {
+      @media(max-width: 1050px) {
+        width: 90%;
+        height: auto;
+      }
+    }
     
   }
   
   .journaling-types {
     padding: 30px 0px;
-    background-color:  #023A53;
+    display: flex;
+    background-color: #023A53;
     color: white;
     
     a {
       color: white; 
     }
+
+    .journaling-types-right {
+      padding: 0px 30px;
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      justify-content: center;
+      align-items: center;
+
+      @media(max-width: 1200px) {
+        width: 100%;
+        padding-bottom: 30px;
+      }
+    }
+
+    @media(max-width: 1200px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 30px;
+    }
     
+    .journaling-types-svg {
+      @media(max-width: 1050px) {
+        width: 90%;
+        height: auto;
+      }
+    }
   }
   
   .learn-more {
@@ -54,6 +156,13 @@
     
     a {
       color: #023A53; 
+    }
+
+    .learn-more-svg {
+      @media(max-width: 1050px) {
+        width: 90%;
+        height: auto;
+      }
     }
   }
 }

@@ -6,6 +6,20 @@ export const UserContext = createContext()
 const UserContextProvider = (props) => {
   const [currentUser, setCurrentUser] = useState(null)
   const [currentUserFirestore, setCurrentUserFirestore] = useState(null)
+  const [prompts, setPrompts] = useState([])
+
+  useEffect(() => {
+    firestore.collection(`prompts`)
+      .get()
+      .then(function (querySnapshot) {
+        querySnapshot.forEach(function (doc) {
+          setPrompts((prevState) => ([...prevState, doc.data().text]))
+        })
+      })
+      .catch(function (error) {
+      console.log("Error getting docuemnts", error)
+    })
+  }, [])
 
   useEffect(() => {
     auth.onAuthStateChanged((user => {

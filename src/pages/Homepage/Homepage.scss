@@ -10,63 +10,36 @@
     text-align: center;
 
     h1 {
-      // margin: auto auto;
       width: 90%;
       letter-spacing: 2px;
       line-height: 45px;
     }
 
-    button {
-      font-family: 'Libre Baskerville', serif;
-      width: 20%;
-      height: 40px;
-      border-radius: 20px;
-      background-color: white;
-      border: none;
-      outline: none;
-      text-align: center;
-      margin-top: 50px;
-
-      a {
-        text-decoration: none;
-       color: black;
-      }
-
-      @media(max-width: 900px) {
-        width: 40%;
-      }
-
-      &:hover{
-        cursor: pointer;
-        background-color: lightgray;
-        color: black;
+    a {
+      button {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 18px;
+        width: 400px;
+        height: 50px;
+        border-radius: 50px;
+        background-color: white;
+        border: none;
+        outline: none;
+        text-align: center;
+        margin-top: 50px;
+  
+        @media(max-width: 900px) {
+          width: 300px;
+        }
+  
+        &:hover{
+          cursor: pointer;
+          background-color: lightgray;
+          color: black;
+        }
       }
     }
 
-  }
-
-  .second-tile {
-    height: 100vh;
-    background-color: #FAF3EC;
-    padding-top: 40px;
-
-    h1 {
-      margin: 0px 0px 0px 33px;
-      width: 50%;
-      letter-spacing: 2px;
-      line-height: 45px;
-      color: #656565;
-    }
-  }
-  .third-tile {
-    height: 100vh;
-    padding-top: 40px;
-    h1 {
-      margin: 0px 0px 0px 33px;
-      width: 50%;
-      letter-spacing: 2px;
-      line-height: 45px;
-    }
 
   }
 }

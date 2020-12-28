@@ -9,15 +9,13 @@ export default function YourActivity() {
 
   const entryOnDate = async (date) => {
     const userRef = await firestore.collection(`users/${currentUser.uid}/Journal Entries`)
-
-    console.log(userRef)
       
       userRef.where("Date", "==", date).get().then((doc) => {
         if (doc.exists) {
-          console.log("entry on today")
+          // console.log("entry on today")
           return true
         } else {
-          console.log("no entry today")
+          // console.log("no entry today")
           return false
         }
     }).catch((error) => {
@@ -50,7 +48,6 @@ export default function YourActivity() {
 
   for (let i = 0; i < months[date][1]; i++) {
     let dayToCheck = `${months[date][0]} ${i + 1}, ${year}`
-    console.log(dayToCheck)
 
     circles.push(<div className={entryOnDate(dayToCheck) ? "entry-today" : "" , "calendar-day"} key={i + 1}>{i + 1}</div>)
   }

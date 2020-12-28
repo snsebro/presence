@@ -12,9 +12,9 @@ export default function AllEntries() {
   const { currentUser } = useContext(UserContext)
 
   const handleChange = (e) => {
-  setFilterValue(e.target.value)
+    setFilterValue(e.target.value)
   }
-  
+
   useEffect(() => {
     currentUserFirestore && setFilteredList(currentUserFirestore)
   }, [currentUserFirestore])
@@ -37,17 +37,17 @@ export default function AllEntries() {
         name="search"
         value={filterValue}
         onChange={handleChange}>
-  
-        </input>
-      {filteredList.map((entry) =>
+
+      </input>
+      {filteredList.sort((a, b) => b.Created - a.Created).map((entry) =>
         <div>
-            <p className="entry-date">
-              {formatDate(entry.Created.toDate().toString())}
-            </p>
-          <Link to={`entry/${entry.id}`}>
-          <p className="entry-preview">
-            {entry && entrySnippet(entry.Body, 100)}
+          <p className="entry-date">
+            {formatDate(entry.Created.toDate().toString())}
           </p>
+          <Link to={`entry/${entry.id}`}>
+            <p className="entry-preview">
+              {entry && entrySnippet(entry.Body, 100)}
+            </p>
           </Link>
         </div>
       )}

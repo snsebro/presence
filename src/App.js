@@ -23,7 +23,8 @@ function App() {
         <Route
           exact
           path="/"
-          component={Homepage} />
+          render={() =>
+            currentUser ? <Redirect to="/dashboard" /> : <Homepage/>} />
         <Route
           path="/login"
           render={() =>

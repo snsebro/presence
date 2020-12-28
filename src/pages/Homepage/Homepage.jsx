@@ -9,7 +9,7 @@ export default function Homepage() {
         <h1>
           Take A Moment To Reflect
         </h1>
-        <button><Link to="/login">Get Started</Link></button>
+        <Link to="/login"><button>Get Started</button></Link>
       </div>
     </div>
   )

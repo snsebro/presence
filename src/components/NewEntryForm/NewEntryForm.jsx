@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react'
+import {useHistory} from 'react-router-dom'
 import { auth, firestore } from '../../firebase/firebase'
 import { UserContext } from '../../context/UserContext'
 import { months } from "../../helpers"
@@ -12,9 +13,12 @@ export default function NewEntryForm() {
 
   const { currentUser } = useContext(UserContext)
 
+  let history = useHistory()
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     const userRef = await firestore.collection(`users/${currentUser.uid}/Journal Entries`)
+
 
     const d = new Date()
     const currentDate = Date.now()
@@ -32,6 +36,7 @@ export default function NewEntryForm() {
       .then((docRef) => {
         console.log("Document written with ID: ", docRef.id)
       })
+      .then(history.push("/dashboard"))
       .catch((error) => {
         console.error("Error adding document: ", error)
       })
@@ -50,11 +55,13 @@ export default function NewEntryForm() {
       <h2>New Entry</h2>
       <label>New Entry</label>
       <input
+        required
         type="text"
         placeholder="Entry Title"
         value={title}
         onChange={handleTitleChange} />
       <textarea
+        required
         onChange={handleChange}
         placeholder="Entry Text"
       />
