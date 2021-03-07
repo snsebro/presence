@@ -31,5 +31,3 @@ Journaling App
 ## Wireframes
 
 [Adobe XD Link](https://xd.adobe.com/view/53ae8ee9-9602-410f-8aad-1efc1ae539e0-06fd/?fullscreen)
-
-
